@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="./jquery-3.6.0.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+    <title>jQuery | Animações básico</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>JQuery - Testando Animações</h1>
+            <nav>
+                <select name="optTarget" id="optTarget">
+                    <option value="p" selected>Texto</option>
+                    <option value="img">Imagens</option>
+                    <option value="h1">Título</option>
+                    <option value="footer">Rodapé</option>
+                    <option value="hr">Divisórias</option>
+                </select>
+                |
+                <input type="number" id="inTime" placeholder="Animação (segundos)" value="0.5">
+                |
+                <button id="btnHide"   accesskey="H">Hide</button>
+                <button id="btnShow"   accesskey="S">Show</button>
+                <button id="btnToggle" accesskey="T">Toggle</button>
+                |
+                <button id="btnSlide" accesskey="H">Slide</button>
+                <select name="optSlide" id="optSlide">
+                    <option value="u" selected>Up</option>
+                    <option value="d">Down</option>
+                    <option value="t">Toggle</option>
+                </select>
+                |
+                <button id="btnFade" accesskey="H">Fade</button>
+                <select name="optFade" id="optFade">
+                    <option value="o">Out</option>
+                    <option value="i">In</option>
+                    <option value="t">Toggle</option>
+                    <option value="2">To</option>
+                </select>
+                <input type="number" id="inTransparencia" placeholder="Transparência" min="0" value="0.5" step="0.05">
+                <div id="divOpcoesImagens" hidden>
+                    <hr>
+                    <h3>Imagens</h3>
+                    <input type="number" id="inAltura"  placeholder="Altura (px)">
+                    <input type="number" id="inLargura" placeholder="Largura (px)">
+                    <input type="number" id="inMargem"  placeholder="Margem (px)">
+                    <button id="btnAnimarImagem">Animate</button>
+                    <button id="btnResetImagem">Reset</button>
+                </div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <body>
+        <div class="container">
+            <div id="divTexto">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut arcu leo. Suspendisse non luctus metus. Suspendisse rhoncus condimentum justo quis faucibus. Cras nibh enim, dapibus pretium dui non, mollis facilisis diam. Suspendisse commodo diam eget finibus bibendum. Integer orci enim, consectetur id sollicitudin eu, cursus a eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut porttitor nunc sed sapien malesuada, eget elementum sem consequat. In a placerat nisl. Phasellus id dui eget dui efficitur blandit. Pellentesque faucibus massa ac leo semper hendrerit.
+                </p>
+                <p>
+                    Donec euismod efficitur augue eget sodales. Quisque interdum id lorem ac maximus. Proin vitae hendrerit mi, id auctor ipsum. Duis ipsum urna, consectetur quis mollis eu, aliquam id ante. Proin a magna aliquam, lobortis metus non, dignissim erat. Praesent id vehicula sapien. Vivamus quis dolor eget leo luctus vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu ipsum massa. Duis dapibus ex nec faucibus rhoncus. Duis semper enim sit amet accumsan finibus. Maecenas vel ipsum faucibus, consequat lorem non, aliquet sem. Nunc id vehicula erat. Proin vitae tempor orci.
+                </p>
+
+                <p>
+                    Vivamus condimentum turpis non odio vehicula, iaculis aliquet sapien interdum. Sed tincidunt metus dui, dignissim pharetra magna pellentesque vel. Nulla at semper arcu. Ut malesuada ipsum id elit auctor imperdiet. Sed posuere efficitur dolor, vitae mollis neque vehicula et. Maecenas eu mauris ac justo sagittis eleifend a vel leo. Praesent ac nunc at arcu interdum pulvinar. Vestibulum faucibus arcu vel efficitur tempus.
+                </p>
+
+                <p>
+                    Phasellus non ex blandit, placerat ante eget, sodales metus. Proin ultrices lobortis augue, non iaculis odio molestie nec. Etiam rhoncus enim sit amet elementum consequat. Quisque mattis interdum dui eu dapibus. Aliquam erat volutpat. Nam ultricies, lacus sed maximus ornare, quam urna sodales dui, sed finibus nisi ante eu nisl. Maecenas vel porttitor mi. Donec posuere mi dapibus venenatis egestas. Fusce ac sapien elit. Aenean sollicitudin felis ac dictum interdum.            
+                </p>
+            </div>
+            <hr>
+            <div id="divImagens">
+                <img src="./assets/img/img1.jpg" id="img1" alt="img1.jpg" srcset="" style="width: 300px; height: 200px; margin: 0;" title="www.freepik.com">
+                <img src="./assets/img/img2.jpg" id="img2" alt="img2.jpg" srcset="" style="width: 350px; height: 200px; margin: 0;" title="www.freepik.com">
+                <img src="./assets/img/img3.jpg" id="img3" alt="img3.jpg" srcset="" style="width: 350px; height: 200px; margin: 0;" title="www.freepik.com">
+            </div>
+        </div>
+    </body>
+    <footer>
+        <hr>
+        <div>
+            <h4>Rodapé</h4>
+            <p>Testes com jQuery</p>
+            <div id="divImagesFooter">
+                <a href="https://www.freepik.com">Images from - www.freepik.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
